@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Dela+Gothic+One&family=Figtree:wght@500&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Nova+Square&family=Poppins:wght@400;500&family=Roboto:wght@400;500;900&family=Rowdies:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-padding-top: 3rem;
+}
+:root {
+   ---color1:#E9F1FA;
+   ---color2:#00ABE4;
+}
+.navbar {
+    background-color: var(---color2);
+}
+.navbar a{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.navbar-nav {
+    gap: 20px;
+    padding: 20px;
+}
+.navbar-nav a {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    margin-top: 5%; 
+    background-color: var(---color1);
+}
+.name{
+    width: 100%;
+	font-size: 30px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	margin-left: 50%;
+	transform: translateX(-200%);
+	opacity: 0;
+    animation: slide-in-anim 1.5s ease-out forwards; 
+}
+.name button {
+    color: white;
+    padding: 10px 20px;
+    background-color: rgb(8, 20, 51);
+}
+.name button:hover {
+    border: 1px solid rgb(8, 20, 51);
+    background-color: #2cdbf2;
+    color: black;
+}
+.name p {
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 25%;
+    color: rgb(204, 45, 23);
+}
+.wave {
+    animation-name: wave-animation;  
+    animation-duration: 2.5s;        
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%;       
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+.adg {
+    margin-left: 60%;
+    transform: translateX(-200%);
+	opacity: 0;
+	animation: slide-in-anim 1.5s ease-out forwards;
+}
+ @keyframes slide-in-anim { 
+	20% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(-45%);
+	}
+	75% {
+		transform: translateX(-52%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%);
+	}
+}
+.name {
+    margin-top: 15%;
+}
+.name h1 {
+    font-size: 3rem;
+    font-family: 'Nova Square', sans-serif;
+    color: rgb(77, 56, 19);
+    text-align: center;
+    justify-content: center;
+}
+.name h2 {
+     font-family: 'Nova Square', sans-serif;
+     color: rgb(77, 56, 19);
+}
+.circle {
+    margin: 80px auto;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top,#00c9ff,#92fe9d);
+    border-radius: 50%;
+}
+.circle::before {
+    position: absolute;
+    content: "";
+    height: 90%;
+    width: 90%;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.service {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.provide h4{
+    margin-top: 5%;
+    text-align: center;
+}
+.provide h4 span {
+    color: #b92b27;
+    font-size: 3rem;
+}
+.provide h1 {
+    text-align: center;
+}
+.provide h1 span {
+    color: #b92b27;
+}
+.card {
+    width: 18rem;
+    box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.568);
+    margin-left: 10%;
+}
+.card img {
+    height:160px;
+ }
+.my-project {
+    width: 100%;
+    height: 200vh;
+    background-color: var(---color1);
+}
+.work p{
+    font-size: 45px;
+    color:  #b92b27;
+    font-weight: 500;
+}
+.work p span {
+    font-size: 25px;
+    color: black;
+}
+.work h1 span{
+    color:  #b92b27;
+}
+/* project-code */
+.class-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.class-1 .carde {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 400px;
+    background-color: #ffff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.425);
+    transition: 0.5s;
+}
+.class-1 .carde:hover {
+    height: 500px;
+}
+.class-1 .carde .img-box {
+    position: absolute;
+    margin-top: 20px;
+    width: 400px;
+    height: 350px;
+    background-color: rgb(29, 28, 28);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.class-1 .carde:hover .img-box {
+    top: -150px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+.class-1 .carde .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.class-1 .carde .content {
+    position: absolute;
+    top: 372px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+.class-1 .carde:hover .content {
+    top: 220px;
+    height: 250px;
+} 
+.class-1 .carde .content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.class-1 .carde .content p {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.664);
+}
+.class-1 .carde .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background-color: var(---color2);
+    color: white;
+    font-weight: 500;
+
+}
+
+@media (max-width:990px) {
+
+    .home {
+        height: auto;
+    }
+    .photo {
+        order: 1!important;
+    }
+    .intro {
+        order: 2!important;
+    }
+    .service {
+        height: auto;
+    }
+    .class-1 .carde .img-box {
+        position: absolute;
+        margin-top: 20px;
+        width: 350px;
+        height: 300px;
+        background-color: rgb(29, 28, 28);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .class-1 .carde:hover .img-box {
+        top: -150px;
+        scale: 0.75;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    }
+    .class-1 .carde .img-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .class-1 .carde .content {
+        position: absolute;
+        top: 332px;
+        width: 100%;
+        padding: 0 30px;
+        height: 35px;
+        overflow: hidden;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .class-1 .carde:hover .content {
+        top: 190px;
+        height: 300px;
+    } 
+    .card {
+        width: 100%;
+        height: auto;
+        margin-left: 0%;
+    }
+    .card img {
+        height:160px;
+     }
+     .my-project {
+        height: auto;
+     }
+}
